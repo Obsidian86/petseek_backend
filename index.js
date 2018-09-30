@@ -4,6 +4,8 @@ const request = require('then-jsonp')
 const cors = require('cors');
 const bodyParser = require('body-parser'); 
 
+const port = process.env.PORT || 9090;
+
 require('dotenv').config();
 
 app.use(cors());
@@ -19,6 +21,6 @@ app.post("/", (req, res) =>{
  
 });
 
-app.listen(9000, () => {
+app.listen(port, () => {
     console.log("Server started")
 })
